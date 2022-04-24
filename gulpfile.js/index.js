@@ -22,7 +22,7 @@ gulp.task('default',
     'clean', 
     'build',
     gulp.parallel(
-      'watch',
+      gulp.series('watch'),
       'connect',
       'webpack:watch'
     )
