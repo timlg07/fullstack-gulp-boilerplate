@@ -6,6 +6,8 @@ var ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
 
+    mode: ENV,
+
     output: {
         filename: '[name].js',
         sourceMapFilename: "[name].js.map"
