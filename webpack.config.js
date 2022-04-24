@@ -25,12 +25,12 @@ module.exports = {
                 enforce: 'pre',
                 test: /\.jsx?$/,
                 exclude: /source\//,
-                use: 'source-map'
+                use: 'source-map-loader'
             },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: 'babel'
+                use: 'babel-loader'
             }
         ]
     },
