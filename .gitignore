@@ -1,0 +1,9 @@
+.DS_Store
+
+# Ignore modules installed with npm
+node_modules/
+
+# Don't include built files
+public/assets/images/*
+public/assets/js/*
+public/assets/css/*
