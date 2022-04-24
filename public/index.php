@@ -12,11 +12,9 @@
 
 <body>
 
-    <?php
-
-    echo "Hello world";
-
-    ?>
+    <div class="banner">
+        <?php echo "Hello world. Current date: " . date('d.m.Y'); ?>
+    </div>
 
 </body>
 

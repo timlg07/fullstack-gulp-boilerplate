@@ -7,6 +7,7 @@ const plumber = require('gulp-plumber');
 const config = require('../config').styles;
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass')(require('node-sass'));
 const rename = require('gulp-rename');
 
@@ -18,6 +19,7 @@ function handleError(err) {
 gulp.task('styles', function () {
   return gulp.src(config.source)
     .pipe(plumber())
+    .pipe(sassGlob())
 
     // normal version
     .pipe(sass({
