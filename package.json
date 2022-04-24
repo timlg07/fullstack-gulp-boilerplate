@@ -49,6 +49,7 @@
     "gulp-webp": "^4.0.1",
     "imagemin-pngquant": "^9.0.2",
     "node-sass": "^7.0.1",
+    "normalize.css": "^8.0.1",
     "require-dir": "^1.2.0",
     "source-map-loader": "^3.0.1",
     "ts-loader": "^9.2.8",

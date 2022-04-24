@@ -20,7 +20,10 @@ gulp.task('styles', function () {
     .pipe(plumber())
 
     // normal version
-    .pipe(sass()).on('error', handleError)
+    .pipe(sass({
+      includePaths: ['node_modules'] 
+    }))
+    .on('error', handleError)
     .pipe(autoprefixer())
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.stream())
