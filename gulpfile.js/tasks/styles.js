@@ -7,7 +7,7 @@ var plumber       = require('gulp-plumber');
 var config        = require('../config').styles;
 var autoprefixer  = require('gulp-autoprefixer');
 var cleanCSS      = require('gulp-clean-css');
-var sass          = require('gulp-sass');
+var sass          = require('gulp-sass')(require('node-sass'));
 var rename        = require('gulp-rename');
 
 function handleError(err) {
