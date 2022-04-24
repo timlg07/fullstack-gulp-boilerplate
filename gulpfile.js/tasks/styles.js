@@ -21,7 +21,7 @@ gulp.task('styles', function () {
 
     // normal version
     .pipe( sass() ).on('error', handleError)
-    .pipe( autoprefixer( config.autoprefixer ) )
+    .pipe( autoprefixer() )
     .pipe( gulp.dest( config.dest ) )
     .pipe( browserSync.stream() )
 

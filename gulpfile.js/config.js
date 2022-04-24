@@ -12,11 +12,7 @@ var dist    = './public/';
 var config = {
   styles: {
     source: src+'styles/styles.scss',
-    dest: dist+'assets/css/',
-    autoprefixer: {
-      browsers: ['> 5%', 'last 2 versions'],
-      cascade: false
-    }
+    dest: dist+'assets/css/'
   },
 
   jshint: {

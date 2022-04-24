@@ -5,6 +5,10 @@
   "author": "Author name",
   "main": "gulpfile.js",
   "private": true,
+  "autoprefixer": {
+    "browsers": ["> 5%", "last 2 versions"],
+    "cascade": false
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.26.0",
