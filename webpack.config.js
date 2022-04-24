@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 
 const ENV = process.env.NODE_ENV || 'development';
 
@@ -42,7 +43,7 @@ module.exports = {
             'NODE_ENV': JSON.stringify(ENV)
         })
     ]).concat(ENV === 'production' ? [
-        new webpack.optimize.DedupePlugin(),
+        new DuplicatePackageCheckerPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: { warnings: false },
