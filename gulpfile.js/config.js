@@ -6,34 +6,34 @@ const localConfig = require('./local.config.js');
 const connect = require('gulp-connect');
 
 // Project paths
-const src     = './source/';
-const vendor  = './source/vendor/';
-const dist    = './public/';
+const src = './source/';
+const vendor = './source/vendor/';
+const dist = './public/';
 
 const config = {
   styles: {
-    source: src+'styles/styles.scss',
-    dest: dist+'assets/css/'
+    source: src + 'styles/styles.scss',
+    dest: dist + 'assets/css/'
   },
 
   jshint: {
     source: [
-      src+'scripts/*.js',
+      src + 'scripts/*.js',
       '!**/vendor/**'
     ]
   },
 
   images: {
-    source: src+'images/**/*',
-    dest: dist+'assets/img/'
+    source: src + 'images/**/*',
+    dest: dist + 'assets/img/'
   },
 
   modernizr: {
     parameters: {
-      options: ['setClasses','html5printshiv','fnBind']
+      options: ['setClasses', 'html5printshiv', 'fnBind']
     },
-    source: dist+'assets/css/*.css',
-    dest: dist+'assets/js'
+    source: dist + 'assets/css/*.css',
+    dest: dist + 'assets/js'
   },
 
   server: {
@@ -56,9 +56,9 @@ const config = {
   clean: {
     all: [
       './.sass-cache',
-      dist+'assets/js',
-      dist+'assets/img',
-      dist+'assets/css'
+      dist + 'assets/js',
+      dist + 'assets/img',
+      dist + 'assets/css'
     ]
   },
 

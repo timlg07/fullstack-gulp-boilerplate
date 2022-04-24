@@ -1,6 +1,6 @@
-const gulp    = require('gulp');
-const config  = require('../config').deploy;
-const exec    = require('child_process').exec;
+const gulp = require('gulp');
+const config = require('../config').deploy;
+const exec = require('child_process').exec;
 
 gulp.task('deploy', function (cb) {
   let cmd = "rsync -rtvzh --progress --del --exclude-from '%exclude_list' %source %user@%host:%dest";
