@@ -3,6 +3,7 @@
    --------------------------------------- */
 
 var localConfig = require('./local.config.js');
+var connect = require('gulp-connect');
 
 // Project paths
 var src     = './source/';
