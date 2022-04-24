@@ -1,6 +1,4 @@
 const webpack = require('webpack');
-const path = require('path');
-const babel = require('babel-loader');
 
 const ENV = process.env.NODE_ENV || 'development';
 
