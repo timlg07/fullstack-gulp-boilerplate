@@ -1,30 +1,5 @@
-/* ---------------------------------------
-    CONFIG
-   --------------------------------------- */
+require('require-dir')('./tasks');
 
-const requireDir = require('require-dir');
-const gulp = require('gulp');
-
-requireDir('./tasks');
-
-gulp.task('build', 
-  gulp.series(
-    'styles', 
-    gulp.parallel(
-      'webpack:once',
-      'images'
-    )
-  )
-);
-
-gulp.task('default', 
-  gulp.series(
-    'clean', 
-    'build',
-    gulp.parallel(
-      gulp.series('watch'),
-      'connect',
-      'webpack:watch'
-    )
-  )
-);
+// due to the changes of Gulp 4, tasks have to be defined before the dependants/ task collections
+require('./tasks/dependants/build');
+require('./tasks/dependants/default');
