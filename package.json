@@ -6,7 +6,10 @@
   "main": "gulpfile.js",
   "private": true,
   "autoprefixer": {
-    "browsers": ["> 5%", "last 2 versions"],
+    "browsers": [
+      "> 5%",
+      "last 2 versions"
+    ],
     "cascade": false
   },
   "devDependencies": {
