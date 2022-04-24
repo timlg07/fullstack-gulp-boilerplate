@@ -24,4 +24,4 @@ gulp.task('images:optimize', function () {
 //     .pipe( gulp.dest(config.dest) );
 // });
 
-gulp.task('images', ['images:optimize']);
+gulp.task('images', gulp.parallel('images:optimize'));
