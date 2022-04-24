@@ -20,14 +20,13 @@ module.exports = {
     },
 
     module: {
-        preLoaders: [
+        rules: [
             {
+                enforce: 'pre',
                 test: /\.jsx?$/,
                 exclude: /source\//,
-                loader: 'source-map'
-            }
-        ],
-        rules: [
+                use: 'source-map'
+            },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
