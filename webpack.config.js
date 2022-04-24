@@ -54,9 +54,5 @@ module.exports = {
 
     stats: { colors: true },
 
-    devtool: 'source-map',
-
-    externals: {
-        "jquery": "jQuery"
-    }
+    devtool: 'source-map'
 };
