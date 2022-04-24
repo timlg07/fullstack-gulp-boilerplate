@@ -2,15 +2,15 @@
     CONFIG
    --------------------------------------- */
 
-var localConfig = require('./local.config.js');
-var connect = require('gulp-connect');
+const localConfig = require('./local.config.js');
+const connect = require('gulp-connect');
 
 // Project paths
-var src     = './source/';
-var vendor  = './source/vendor/';
-var dist    = './public/';
+const src     = './source/';
+const vendor  = './source/vendor/';
+const dist    = './public/';
 
-var config = {
+const config = {
   styles: {
     source: src+'styles/styles.scss',
     dest: dist+'assets/css/'

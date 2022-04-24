@@ -1,10 +1,10 @@
-var gulp    = require('gulp');
-var plumber = require('gulp-plumber');
-var config  = require('../config').webpack;
-var webpack = require('webpack-stream');
-var named = require('vinyl-named');
+const gulp    = require('gulp');
+const plumber = require('gulp-plumber');
+const config  = require('../config').webpack;
+const webpack = require('webpack-stream');
+const named = require('vinyl-named');
 
-var webpackConfig = require('../../webpack.config.js');
+const webpackConfig = require('../../webpack.config.js');
 
 gulp.task('webpack:once', function () {
   webpackConfig.watch = false;

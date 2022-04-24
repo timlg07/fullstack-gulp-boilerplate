@@ -2,13 +2,13 @@
 // Compile using SASS, add Autoprefixer and build two versions: normal and minified
 //
 
-var gulp          = require('gulp');
-var plumber       = require('gulp-plumber');
-var config        = require('../config').styles;
-var autoprefixer  = require('gulp-autoprefixer');
-var cleanCSS      = require('gulp-clean-css');
-var sass          = require('gulp-sass')(require('node-sass'));
-var rename        = require('gulp-rename');
+const gulp          = require('gulp');
+const plumber       = require('gulp-plumber');
+const config        = require('../config').styles;
+const autoprefixer  = require('gulp-autoprefixer');
+const cleanCSS      = require('gulp-clean-css');
+const sass          = require('gulp-sass')(require('node-sass'));
+const rename        = require('gulp-rename');
 
 function handleError(err) {
   console.log(err.name, ' in ', err.plugin, ': ', err.message);

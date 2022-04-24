@@ -1,8 +1,8 @@
-var gulp      = require('gulp');
-var config    = require('../config').images;
-var imagemin  = require('gulp-imagemin');
-var pngquant  = require('imagemin-pngquant');
-var webp      = require('gulp-webp');
+const gulp      = require('gulp');
+const config    = require('../config').images;
+const imagemin  = require('gulp-imagemin');
+const pngquant  = require('imagemin-pngquant');
+const webp      = require('gulp-webp');
 
 gulp.task('images:optimize', function () {
   return gulp.src( config.source )

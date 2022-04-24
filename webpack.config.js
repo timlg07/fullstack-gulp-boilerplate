@@ -1,8 +1,8 @@
-var webpack = require('webpack');
-var path    = require('path');
-var babel   = require('babel-loader');
+const webpack = require('webpack');
+const path    = require('path');
+const babel   = require('babel-loader');
 
-var ENV = process.env.NODE_ENV || 'development';
+const ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
 

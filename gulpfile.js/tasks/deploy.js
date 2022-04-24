@@ -1,9 +1,9 @@
-var gulp    = require('gulp');
-var config  = require('../config').deploy;
-var exec    = require('child_process').exec;
+const gulp    = require('gulp');
+const config  = require('../config').deploy;
+const exec    = require('child_process').exec;
 
 gulp.task('deploy', function (cb) {
-  var cmd = "rsync -rtvzh --progress --del --exclude-from '%exclude_list' %source %user@%host:%dest";
+  let cmd = "rsync -rtvzh --progress --del --exclude-from '%exclude_list' %source %user@%host:%dest";
 
   cmd = cmd.replace('%source', config.source);
   cmd = cmd.replace('%user', config.user);

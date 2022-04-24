@@ -1,3 +1,3 @@
-var Test = require('./modules/test');
+const Test = require('./modules/test');
 
 Test();

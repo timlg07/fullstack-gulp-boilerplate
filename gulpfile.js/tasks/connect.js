@@ -1,6 +1,6 @@
-var gulp    = require('gulp');
-var config  = require('../config').server;
-var connect = require('gulp-connect-php');
+const gulp    = require('gulp');
+const config  = require('../config').server;
+const connect = require('gulp-connect-php');
 
 global.browserSync = require('browser-sync');
 

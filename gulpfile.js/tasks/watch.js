@@ -1,8 +1,8 @@
-var gulp = require('gulp');
-var config = require('../config');
-var watch = require('gulp-watch');
+const gulp = require('gulp');
+const config = require('../config');
+const watch = require('gulp-watch');
 
-var watchConfig = config.watch;
+const watchConfig = config.watch;
 
 gulp.task('watch', function (done) {
   watch(watchConfig.styles, gulp.series('styles'));
