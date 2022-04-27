@@ -46,16 +46,22 @@ module.exports = {
     ]),
 
     optimization: {
+        // TerserPlugin is only enabled in production mode
         minimize: isProduction,
         minimizer: [
             new TerserPlugin({
                 terserOptions: {
+                    // Minify the JS source
                     compress: true,
+
                     format: {
                         ascii_only: true
                     }
                 },
+
+                // License comments of packages will be placed in scripts.js.LICENSE.txt
                 extractComments: true,
+
                 parallel: true,
             })
         ],
