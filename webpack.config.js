@@ -1,6 +1,8 @@
 const webpack = require('webpack');
+const TerserPlugin = require("terser-webpack-plugin");
 
 const ENV = process.env.NODE_ENV || 'development';
+const isProduction = ENV.toLowerCase() === 'production';
 
 module.exports = {
 
@@ -41,15 +43,23 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify(ENV),
             'NODE_ENV': JSON.stringify(ENV)
         })
-    ]).concat(ENV === 'production' ? [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: { warnings: false },
-            minimize: true,
-            sourceMap: true,
-            comments: false
-        })
-    ] : []),
+    ]),
+
+    optimization: {
+        minimize: isProduction,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    compress: true,
+                    format: {
+                        ascii_only: true
+                    }
+                },
+                extractComments: true,
+                parallel: true,
+            })
+        ],
+    },
 
     stats: { colors: true },
 

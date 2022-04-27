@@ -7,7 +7,7 @@
 
     <title>Website</title>
 
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
 </head>
 
 <body>
