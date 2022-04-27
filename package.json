@@ -12,6 +12,11 @@
     ],
     "cascade": false
   },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "production": "cross-env NODE_ENV=production gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
