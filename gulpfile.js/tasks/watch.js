@@ -7,11 +7,7 @@ const watchConfig = config.watch;
 gulp.task('watch', function (done) {
   watch(watchConfig.styles, gulp.series('styles'));
   watch(watchConfig.images, gulp.series('images'));
-  watch([
-    watchConfig.livereload, 
-    watchConfig.styles_output, 
-    watchConfig.images
-  ]).on('change', browserSync.reload);
+  watch(watchConfig.livereload).on('change', browserSync.reload);
 
   done();
 });
