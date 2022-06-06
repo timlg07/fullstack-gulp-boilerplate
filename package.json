@@ -56,7 +56,7 @@
     "gulp-webp": "^4.0.1",
     "imagemin-pngquant": "^9.0.2",
     "mini-css-extract-plugin": "^2.6.0",
-    "node-sass": "^7.0.1",
+    "sass": "^1.52.1",
     "normalize.css": "^8.0.1",
     "require-dir": "^1.2.0",
     "source-map-loader": "^3.0.1",
