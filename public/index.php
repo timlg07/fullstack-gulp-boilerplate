@@ -16,6 +16,11 @@
         <?php echo "Hello world. Current date: " . date('d.m.Y'); ?>
     </div>
 
+    <div class="b">
+        <div class="a"></div>
+    </div>
+    <div class="a"></div>
+
 </body>
 
 <script type="text/javascript" src="/assets/js/script.js"></script>

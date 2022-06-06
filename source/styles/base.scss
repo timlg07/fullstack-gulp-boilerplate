@@ -1,3 +1,14 @@
 body {
     background: #e0e0e0;
 }
+
+.a {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 107);
+    margin: 1rem;
+}
+
+.a:not(.b .a) {
+    background-color: rgb(0, 107, 0);
+}
